@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title>一鸣活动测试</title>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="lib/mov/mov.css" />
+
+</head>
+<body ondragstart="return false" onselect="return false" onselectstart="return false" oncontextmenu="return false">
+
+<div id="CC">
+
+    <div id="_unable"></div>
+    <div id="_share"></div>
+
+    <section class="cc" id="Loader"></section>
+
+    <section class="cc" id="Main">
+        <canvas id="Canvas" width="700" height="1140"></canvas>
+    </section>
+
+    <section class="cc" id="Page1">
+        Page1
+    </section>
+
+</div>
+
+<script src="lib/jquery-2.1.4.min.js"></script>
+<script src="lib/jquery.mobile-1.4.5.min.js"></script>
+<script src="lib/modernizr.js"></script>
+
+<script src="lib/createjs/createjs-2015.11.26.min.js"></script>
+<!--<script src="lib/createjs/easeljs-0.8.2.min.js"></script>-->
+<!--<script src="lib/createjs/preloadjs-0.6.2.min.js"></script>-->
+<!--<script src="lib/createjs/tweenjs-0.6.0.min.js"></script>-->
+<!--<script src="lib/createjs/webgl-0.8.2.js"></script>-->
+
+<script src="src/js/canvas_lib.js"></script>
+<script src="src/js/sprite.js"></script>
+<script src="src/js/loader.js"></script>
+<script src="src/js/init.js"></script>
+<script src="src/js/canvas_view_level1.js"></script>
+<script src="src/js/canvas_view_level2.js"></script>
+<script src="src/js/canvas_view_level3.js"></script>
+<script src="src/js/canvas_action.js"></script>
+<script src="lib/mov/mov.js"></script>
+
+<script src="lib/cc/mvc.js"></script>
+<script src="src/js/room.js"></script>
+
+<script>
+
+
+	
+    $(function(){
+        //if(Modernizr.webgl) alert("webGL");
+
+        Room.ini();
+        setTimeout(function(){
+            Loader(700,1140,'Main');
+            //$("#LoaderM").show();
+            //loading_init();
+            //leater_init();
+
+            //init_load();
+
+        },200);
+
+//        var ki = 0;
+//        $(".music_button").click(function(){
+//            if(ki==0){
+//                $("#music_button1").hide();
+//                $("#music_button2").show();
+//                createjs.Sound.volume = 0;
+//                ki = 1;
+//            }
+//            else{
+//                $("#music_button2").hide();
+//                $("#music_button1").show();
+//                createjs.Sound.volume = 1;
+//                ki = 0;
+//            }
+//        })
+
+        $('body').on('touchmove', function (event) { event.preventDefault(); });
+		
+//		$('.btn1').tap(function(){
+//			window.location.href = "http://mp.weixin.qq.com/s?__biz=MjM5Mjg5NzQyMA==&mid=2652478682&idx=2&sn=e7fa3464e469d6d822bbffffce1fe13d&mpshare=1&scene=1&srcid=1010sMbkFrpx11CcGTj5uoMp&from=singlemessage&isappinstalled=0#wechat_redirect";
+//		})
+    });
+
+
+
+</script>
+
+</body>
+</html>
